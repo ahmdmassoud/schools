@@ -1,0 +1,17 @@
+{
+  "name": "schoolsportal",
+  "version": "1.0.0",
+  "description": "this is an app to show school in helisnki and searching them to find the most suitble school for you",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ahmed Massoud",
+  "license": "ISC",
+  "dependencies": {
+    "baser": "^1.0.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "request": "^2.88.0"
+  }
+}

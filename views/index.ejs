@@ -1,0 +1,47 @@
+<%- include('header')%>
+  <% isExisted = function(value) {
+      if (value === "" || value==null || value ==undefined) {
+          console.log("unkown detected");
+          return "Unkown"
+      }
+      else {
+          console.log("value detected "+ value)
+          return value
+      }
+  }%> 
+  <div class="container"> <br/>
+    <h2>Schools in Helsenki</h2>
+    <div class="accordion" id="schooldata">
+      <% for( var i=0; i < data.results.length; i++) { %>
+        <div class="card">
+          <div class="card-header" id="heading<%=i%>">
+            <h5 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse<%=i%>" aria-expanded="false" aria-controls="collapse<%=i%>">
+              <%= data.results[i].names[0].official_name%>
+            </button>
+            </h5>
+          </div>
+          <div id="collapse<%=i%>" class="collapse" aria-labelledby="heading<%=i%>" data-parent="#schooldata">
+            <div class="card-body">
+                <h5> School details </h5>
+                <p>School name: <%= data.results[i].names[0].official_name %>  </p>
+                <p>School founder: </p>
+                <ul>
+                    <% for( var j=0; j < data.results[i].founders.length; j++) { %>
+                        <li> <%= isExisted(data.results[i].founders[j].founder.name) %></li>
+                    <% } %>
+                </ul>
+                <p>School Language: </p> 
+                <ul>
+                    <% for( var n=0; n < data.results[i].languages.length; n++) { %>
+                        <li> <%= isExisted(data.results[i].languages[n].language) %>  </li>
+                    <% } %>
+                </ul>
+                <p>School Type: <%= isExisted(data.results[i].types[data.results[i].types.length-1].type.name) %></p> 
+            </div>
+          </div>
+        </div>
+      <% } %>
+    </div>    
+  </div>
+<%- include('footer')%>
