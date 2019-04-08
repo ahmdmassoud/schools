@@ -4,6 +4,7 @@
   "description": "this is an app to show school in helisnki and searching them to find the most suitble school for you",
   "main": "app.js",
   "scripts": {
+    "start":"node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ahmed Massoud",
