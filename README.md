@@ -5,5 +5,5 @@ I used Bootstrap, nodejs.
 
 you can find the first version of the app deployed on google cloud 
 https://abiding-cistern-237021.appspot.com/
-
+Unfortantely it is not available online anymore. 
 ### In the future improvement I  will add ranking functionality and review for the schools and add reviews 
